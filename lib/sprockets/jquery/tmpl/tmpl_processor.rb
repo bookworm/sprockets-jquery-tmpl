@@ -5,6 +5,11 @@ if defined?(Rails)
   require 'action_view'
   require 'action_view/helpers'
   require 'action_view/helpers/javascript_helper'  
+end   
+
+if defined?(Padrino) 
+  require 'padrino-helpers'
+  require 'padrino-helpers/format_helpers'
 end
 
 module Sprockets
