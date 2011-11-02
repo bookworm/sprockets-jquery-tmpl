@@ -11,7 +11,8 @@ module Sprockets
   module Jquery
     module Tmpl
       class TmplProcessor < Tilt::Template
-        include ActionView::Helpers::JavaScriptHelper if defined?(Rails)  
+        include ActionView::Helpers::JavaScriptHelper if defined?(Rails)           
+        include Padrino::Helpers::FormatHelpers if defined?(Padrino)
 
         def self.default_mime_type
           'application/javascript'
